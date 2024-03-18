@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="" th:href="@{/css/login.css}">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftside">
+            <a href="">
+                <img src="/img/Picsart_24-02-28_20-12-23-079.png" alt="">
+            </a>
+            <div class="logo">
+                <img src="/img/Picsart_24-02-28_20-24-26-458.png" alt="">
+            </div>
+            <div class="para">
+                <h3>TuneHub is an online music streaming service. It offers uninterrupted streaming of songs and
+                    podcasts.
+                </h3>
+            </div>
+        </div>
+
+        <div class="rightside">
+            <div class="box">
+                <form action="validate" method="post">
+                    <h2>USER LOGIN</h2>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your Email">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" aria-hidden="false" placeholder="Enter your password">
+
+                    <input type="submit" value="Login" id="btn">
+                    
+                    <a href="/registeration">REGISTER</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>

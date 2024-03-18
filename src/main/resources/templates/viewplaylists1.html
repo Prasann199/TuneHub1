@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>viewplaylists1</title>
+
+    <style>
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+        table {
+            width: 80%;
+        }
+        tr {
+            width: 100%;
+        }
+        th {
+            width: 100px;
+            padding: 0%;
+            height: 5vh;
+            background-color: black;
+            color: white;
+            box-shadow: inset 3px 3px 20px rgb(78, 78, 78);
+        }
+        td {
+            width: 100px;
+            border: 5px solid white;
+            font-size: 17px;
+            background-color: rgb(238, 238, 238);
+            box-shadow: inset 4px 4px 11px white;
+            text-align: center;
+        }
+        td audio {
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="play:${list}">
+                    <td th:text="${play.id}"></td>
+                    <td>
+                        <ul>
+								<span th:text="${play.name}"></span><br><br>
+                            <li th:each="song : ${play.songs}">
+                                <span th:text="${song.name}"></span><br>
+                                <audio controls>
+									<source th:src="${song.link}">
+								</audio>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

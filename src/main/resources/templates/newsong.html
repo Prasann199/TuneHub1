@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Song</title>
+    <link rel="stylesheet" href="" th:href="@{/css/newsong.css}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftside">
+            <a href="">
+                <img src="/img/Picsart_24-02-28_20-12-23-079.png" alt="">
+            </a>
+            <div class="logo">
+                <img src="/img/Picsart_24-02-28_20-24-26-458.png" alt="">
+            </div>
+            <div class="para">
+                <h3>TuneHub is an online music streaming service. It offers uninterrupted streaming of songs and
+                    podcasts.
+                </h3>
+            </div>
+        </div>
+
+        <div class="rightside">
+            <div class="box">
+                <h2>Add Songs</h2>
+                <form action="addsong" method="post">
+                    <label for="name">Song Name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter song name">
+                    <br><br>
+                    <label for="artist">Song Artist</label><br>
+                    <input type="text" id="artist" name="artist" placeholder="Enter song artist name">
+                    <br><br>
+                    <label for="genere">Song Genere</label><br>
+                    <input type="text" id="genere" name="genere" placeholder="Enter song genere">
+                    <br><br>
+                    <label for="link">Song Link</label><br>
+                    <input type="text" id="link" name="link" placeholder="Enter song genere">
+                    <br><br>
+                    <input type="submit" value="Add Song" id="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+body, html {
+    background-color: rgb(159, 159, 159);
+    height: 100vh;
+    width: 100%;
+
+}
+.leftside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    min-height: 100vh;
+    height: fit-content;
+    background:linear-gradient(to left bottom,rgb(15, 15, 15),rgb(32, 32, 32));
+}
+.leftside a img {
+    width: 350px;
+    display: flex;
+    margin: 50px auto;
+    opacity: 0.5;
+}
+
+.leftside a{
+    text-decoration: none;
+}
+.leftside h3{
+    color: white;
+    text-align: center;
+    margin: 30px 0px 60px 0px;
+    opacity: 0.6;
+}
+.para{
+    display: flex;
+    width: 80%;
+    /* border: 2px solid yellow; */
+    margin: 0px auto;
+}
+.logo img{
+    width: 380px;
+    opacity: 0.8;
+    border-radius: 12px;
+}
+.rightside{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid orange; */
+    width: 50%;
+    background-color: rgb(159, 159, 159);
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.box{
+    /* border: 2px solid blue; */
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    width:80%;
+    height:fit-content;
+    margin: 0px auto;
+    text-align: center;
+    padding: 50px 10px;
+    background-color: white;
+    box-shadow: 3px 3px 25px rgb(83, 82, 82);
+    opacity: 0.8;
+    justify-content: center;
+
+}
+.upper input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    width: 70%;
+    height: 5vh;
+    font-size: 18px;
+    padding: 3px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.638);
+   
+}
+.upper label{
+    display: flex;
+    margin: 0px 0px -10px 15%;
+    font-size: 19px;
+}
+.radio1{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* border: 3px solid greenyellow; */
+    margin: 15px auto;
+    width: 70%;
+}
+
+.radio1 input{
+    margin: 0px 5px 0px 10px;
+    /* width: 5%; */
+    display: inline-block;
+}
+.radio1 label{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    margin: 0px 0px 0px 0px;
+
+    /* border: 1px solid blue; */
+
+}
+#gender,#role{
+    font-size: 19px;
+    margin-left: 5px;
+}
+.radio2{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    /* border: 3px solid red; */
+    margin: 15px 15%;
+    width: 60%;
+    
+}
+.box .addres{
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    flex-direction: column;
+    /* border: 2px solid green; */
+    width: 70%;
+}
+.addres label{
+    font-size: 19px;
+    margin: 0px -10px -10px 0px;
+    display: flex;
+    width: 100%;
+
+    /* border: 2px solid blue; */
+}
+.addres textarea{
+    width: 100%;
+    /* border-bottom: 2px solid black; */
+    background-color: rgb(189, 190, 190);
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+}
+.addres input{
+    width: 100%;
+    height: 6vh;
+    font-size: 19px;
+    font-weight: 600;
+    border: 2px solid white;
+    background-color:gray;
+    color: black;
+    
+    
+}
+.addres input:hover{
+    background-color:rgb(41, 41, 159);
+    border: 2px solid black;
+    color: white;
+}
+.radio2 input{
+    margin: 0px 5px 0px 5px;
+    /* width: 5%; */
+    display: inline-block;
+    border: 2px solid red;
+}
+.radio2 label{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    margin: 0px 10px 0px 0px;
+
+    /* border: 1px solid blue; */
+}
+.rightside h2{
+    margin-bottom: 25px;
+}
+#btn{
+    margin:30px ;
+    font-size: 19px;
+    font-weight: 600;
+    border: 2px solid white;
+    background-color:gray;
+    color: black;
+    height: fit-content;
+}
+
+#btn:hover{
+    background-color:rgb(41, 41, 159);
+    border: 2px solid black;
+    color: white;
+}
+@media only screen and (max-width:750px){
+    .container{
+        flex-direction: column;
+    }
+    .leftside{
+        width: 100%;
+        height: fit-content;
+    }
+    .rightside{
+        width: 100%;
+        height: fit-content;
+    }
+    .frame{
+        width: 95%;
+    }
+    .box{
+        margin: 10vh auto;
+        padding: 50px 5px;
+        width: 90%;
+    }
+}

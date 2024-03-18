@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Customerhome</title>
+	<link rel="stylesheet" href="" th:href="@{/css/customerhome.css}">
+</head>
+
+<body>
+	<div class="container">
+		<div class="leftside">
+			<a href="">
+				<img src="/img/Picsart_24-02-28_20-12-23-079.png" alt="">
+			</a>
+			<div class="logo">
+				<img src="/img/Picsart_24-02-28_20-24-26-458.png" alt="">
+			</div>
+			<div class="para">
+				<h3>TuneHub is an online music streaming service. It offers uninterrupted streaming of songs and
+					podcasts.
+				</h3>
+			</div>
+		</div>
+
+		<div class="rightside">
+			<div class="box">
+				<h2>Customer Home</h2>
+				<div th:unless="${ispremium}" class="non-premium">
+					<form action="pay">
+						<input type="submit" value="GET PREMIUM">
+					</form>
+					<br>
+					<form action="logout">
+						<input type="submit" value="LOGOUT">
+					</form>
+				</div>
+
+				<div th:if="${ispremium}" class="premium">
+					<form action="viewsongs" method="get">
+						<input type="submit" value="view songs">
+					</form>
+
+					<form action="logout">
+						<input type="submit" value="LOGOUT">
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+</html>
